@@ -1,0 +1,29 @@
+{
+  "name": "xpath-vs-css",
+  "version": "1.0.0",
+  "description": "A simple benchmark for CSS and XPath selectors",
+  "keywords": [],
+  "license": "LGPL-3.0-or-later",
+  "author": {
+    "name": "OnkelTem",
+    "email": "aneganov@gmail.com"
+  },
+  "scripts": {
+    "build": "NODE_ENV=production webpack",
+    "check": "tsc",
+    "dev": "NODE_ENV=development webpack"
+  },
+  "dependencies": {
+    "@babel/cli": "^7.17.10",
+    "@babel/core": "^7.18.0"
+  },
+  "devDependencies": {
+    "@babel/preset-env": "^7.18.0",
+    "@babel/preset-typescript": "^7.17.12",
+    "babel-loader": "^8.2.5",
+    "html-webpack-plugin": "^5.5.0",
+    "typescript": "^4.6.4",
+    "webpack": "^5.72.1",
+    "webpack-cli": "^4.9.2"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "compilerOptions": {
+    "lib": ["es2017", "dom", "dom.iterable"],
+    "module": "commonjs",
+    "target": "es2021",
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "noEmit": true
+  },
+  "include": ["src"]
+}

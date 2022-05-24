@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= htmlWebpackPlugin.options.title %></title>
+    <style>
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+        background: #f9f9f9;
+        color: #313131;
+      }
+      body {
+        font-family: Helvetica, Arial, sans-serif;
+        max-width: 960px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      header {
+        overflow: hidden;
+        height: 10vh;
+      }
+      main {
+        height: 10vh;
+      }
+      footer {
+        height: 70vh;
+        overflow-x: hidden;
+        overflow-y: scroll;
+      }
+      #benchmarks {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+      }
+      #benchmarks > div {
+        border: 1px solid silver;
+        padding: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>CSS-selector vs XPath-selector benchmark</h1>
+    </header>
+    <main>
+      <div id="benchmarks">
+        <div>
+          <button id="btnCss" disabled>CSS-selector benchmark</button>
+          <div id="resCss"></div>
+        </div>
+        <div>
+          <button id="btnXpath" disabled>XPath-selector benchmark</button>
+          <div id="resXpath"></div>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <div id="message">Loading test data...</div>
+      <div id="data"></div>
+    </footer>
+  </body>
+</html>
