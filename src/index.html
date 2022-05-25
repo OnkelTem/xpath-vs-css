@@ -18,7 +18,7 @@
       }
       header {
         overflow: hidden;
-        height: 10vh;
+        height: 12vh;
       }
       main {
         height: 10vh;
@@ -33,26 +33,60 @@
         grid-template-columns: 1fr 1fr;
       }
       #benchmarks > div {
+        display: grid;
         border: 1px solid silver;
         padding: 10px;
+        grid-template-columns: auto auto;
+        gap: 4px;
+      }
+      .results {
+        display: grid;
+        grid-template-columns: auto auto auto;
+        gap: 4px;
+        color: #808080;
+      }
+      tt {
+        font-family: Helvetica, Arial, sans-serif;
+        color: #2055f4;
+      }
+      #total {
+        margin: 1em 0;
+        text-align: center;
+        color: #008f00;
       }
     </style>
   </head>
   <body>
     <header>
-      <h1>CSS-selector vs XPath-selector benchmark</h1>
+      <h1>CSS-selector vs XPath benchmark</h1>
+      <p>
+        GitHub repo: <a href="https://github.com/OnkelTem/xpath-vs-css">https://github.com/OnkelTem/xpath-vs-css</a>
+      </p>
     </header>
     <main>
       <div id="benchmarks">
-        <div>
-          <button id="btnCss" disabled>CSS-selector benchmark</button>
-          <div id="resCss"></div>
+        <div id="css">
+          <div>
+            <button disabled>CSS-selector benchmark</button>
+          </div>
+          <div class="results">
+            <div class="runs"></div>
+            <div class="current"></div>
+            <div class="average"></div>
+          </div>
         </div>
-        <div>
-          <button id="btnXpath" disabled>XPath-selector benchmark</button>
-          <div id="resXpath"></div>
+        <div id="xpath">
+          <div>
+            <button disabled>XPath-selector benchmark</button>
+          </div>
+          <div class="results">
+            <div class="runs"></div>
+            <div class="current"></div>
+            <div class="average"></div>
+          </div>
         </div>
       </div>
+      <div id="total"></div>
     </main>
     <footer>
       <div id="message">Loading test data...</div>
